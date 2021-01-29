@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>VMBH</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+      <link rel="stylesheet" href="css/style.css">
+      <script type="text/javascript" src="js/javascript.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="js/jquery.nicescroll.min.js" id="NiceScrolling"></script>
+      <!---NICE SCROLL--->
+      <script>
+      $( document ).ready( function()
+        {
+          if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent) == false) {
+            var nice = $("html").niceScroll({cursorcolor:"(0,0,0,0)",boxzoom:true,touchbehavior:true,grabcursorenabled:false,gesturezoom: true,cursoropacitymax: 0,cursoropacitymin: 0,});
+        }
+        });
+      </script>
+   </head>
+   <body onLoad="returnHome()">
+      <div class="about" onclick="loadPopUp('WTPopUp')">
+         <h5>About</h5>
+      </div>
+      <audio id="audio" src="assets/Museumsounds.mp3" autoplay loop></audio>
+      <button type="button"  onclick="aud_play_pause()">&#127925</button>
+      <div class="modalContainerX" id="Popup1">
+         <div id="alertBox" class="videoBox">
+            <div class="topbar">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('Popup1')">
+               <div id="topbar">Introduction to the Origins Wing</div>
+            </div>
+            <iframe class="video" src="https://player.vimeo.com/video/503693702" style="border:0;"> </iframe>
+         </div>
+      </div>
+      <input type="image" class="button1" id="objectButton" src="assets/icontest.png" onclick="loadPopUp('Popup1', this)" data-tilt data-tilt-scale="1.1">
+      <div class="modalContainerX" id="Popup2">
+         <div id="alertBox">
+            <div class="topbar">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('Popup2')">
+               <div id="topbar">2021 Statue 1/4</div>
+            </div>
+            <div class="contentContainer">
+               <H1>Why Black History Month is more important than ever this year? </H1>
+               <p> Black History Month is observed across Canada every February. </p>
+               <p>It provides an opportunity to share and learn about the experiences, contributions and achievements of peoples of African ancestry.</p>
+               <p>This summer, Black Lives Matter protests around the world sparked a commitment among many individuals and organisations to educate themselves about Black history, heritage and culture – as part of understanding racism and standing in solidarity against it.</p>
+               <p>If that commitment is to transcend beyond social media into real change, everyone, from all communities, needs to embrace Black History Month as a starting point for exploring, discovering and celebrating Black history, heritage and culture – both past and contemporary.</p>
+               <p>From the incredible achievements and contributions, to the many untold stories and barriers to progress – the day-to-day reality of institutionalised racism.</p>
+               <p>Black Lives Matter - Sudbury is proud to present to you the BLMS-Virtual Museum.</p>
+               <p>Each week we will be releasing educational segments that focus on the stories and experiences of Black Canadians, past and present. </p>
+               <p>Take this time to learn, discuss, and share.</p>
+               <p class="Sources">Sources<br/><a href="https://www.blackhistorymonth.org.uk/article/section/bhm-intros/why-black-history-month-is-more-important-than-ever-this-year/">https://www.blackhistorymonth.org.uk/article/section/bhm-intros/why-black-history-month-is-more-important-than-ever-this-year/</a></p>
+            </div>
+         </div>
+      </div>
+      <input type="image" class="button2" id="buttonFade" name="" src="assets/icontest.png" onclick="loadPopUp('Popup2')" data-tilt data-tilt-scale="1.1">
+      <div class="modalContainerX" id="Popup3">
+         <div id="alertBox">
+            <div class="topbar">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('Popup3')">
+               <div id="topbar">Maple Leaf 2/4</div>
+            </div>
+            <div class="contentContainer">
+               <H1>The origins of Black History Month in Canada</H1>
+               <p>In 1978, the Ontario Black History Society (OBHS) was established. Its founders, including Dr. Daniel G. Hill and Wilson O. Brooks, presented a petition to the City of Toronto to have February formally proclaimed as Black History Month.</p>
+               <p>In 1979, the first-ever Canadian proclamation was issued by Toronto.</p>
+               <p>In 1988, the first Black History Month in Nova Scotia was observed. </p>
+               <p>In 1993, the OBHS successfully filed a petition in Ontario to proclaim February as Black History Month. Following that success, Rosemary Sadlier, president of the OBHS, introduced the idea of having Black History Month recognized across Canada to Jean Augustine, member of Parliament (MP) and Parliamentary Secretary.  Augustine enthusiastically supported the idea. </p>
+               <p>In February 2008, Senator Donald Oliver, the first Black man appointed to the Senate, introduced a motion to have the Senate officially recognize February as Black History Month. The motion was approved unanimously and was adopted on 4 March 2008, completing Canada’s parliamentary position on Black History Month in Canada.</p>
+               <p>Did you know?</p>
+               <p>Jean Augustine was the first Black woman elected to the House of Commons (1993) and the first Black woman to be appointed to Cabinet (2002). Augustine served as Secretary of State in charge of multiculturalism and the Status of Women in the Cabinets of prime ministers Jean Chrétien and Paul Martin.</p>
+               <img id="JeanImage" src="http://www.jeanaugustine.ca/wp-content/uploads/2014/10/JA-headshot-2016-e1472927788141.jpg">
+               <p class="Sources">Sources<br/><a href="https://www.thecanadianencyclopedia.ca/en/article/black-history-month-in-canada#:~:text=Black%20History%20Month%20was%20officially,also%20Black%20History%20in%20Canada).&text=see%20Black%20Canadians).-,It%20was%20initiated%20in%20Canada%20by%20the%20Ontario%20Black%20History,as%20a%20member%20of%20Parliament.">https://www.thecanadianencyclopedia.ca/en/article/black-history-month-in-canada#:~:text=Black%20History%20Month%20was%20officially,also%20Black%20History%20in%20Canada).&text=see%20Black%20Canadians).-,It%20was%20initiated%20in%20Canada%20by%20the%20Ontario%20Black%20History,as%20a%20member%20of%20Parliament.</a></p>
+            </div>
+         </div>
+      </div>
+      <input type="image" class="button3" name="" src="assets/icontest.png" onclick="loadPopUp('Popup3')" data-tilt data-tilt-scale="1.1">
+      <div class="modalContainerX" id="Popup4">
+         <div id="alertBox">
+            <div class="topbar">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('Popup4')">
+               <div id="topbar">Graduation Cap 3/4</div>
+            </div>
+            <div class="contentContainer">
+               <H1>Teaching Black History All Year Long: Striving towards inclusive education</H1>
+               <p> The educational pipeline is a period of exploration of one’s identity, place in society and their academic interests. It is a phase where opinions are like clay in its initial stages — if well-shaped it can make a beautiful pot, but mishandling can result in long-lasting effects. </p>
+               <p>The curriculum taught to children in school defines the opinions formed at this “early clay” phase but also sets them up for future academic exploration.</p>
+               <p>Unfortunately, cultural diversity has yet to be fully integrated into the school curriculums. As demonstrated by the Ontario Black History Society, in Canada, history is only ever taught one way. </p>
+               <iframe class="youtubeVideo" src="https://www.youtube.com/embed/tgbNymZ7vqY" style="border:0;"> </iframe>
+               <p>It is essential to teach the youth of Ontario about the ways that Black Canadians have contributed to this country, but also the ways in which they have been mistreated by the Canadian government.</p>
+               <p>If we want equality for all, we need to confront history as it happened, even if it might make us uncomfortable.</p>
+               <p>"Have we read our own authors such as Dionne Brand, Afua Cooper and George Elliott Clarke? Do we know that the story of African-Canadians spans four hundred years, and includes slavery, abolition, pioneering, urban growth, segregation, the civil rights movement and a long engagement in civic life?" — Lawrence Hill</p>
+               <p class="Sources">Sources<br/>
+                  <a href="https://capitalcurrent.ca/schools-need-to-embrace-canadas-black-history/">https://capitalcurrent.ca/schools-need-to-embrace-canadas-black-history/</a>
+                  <a href="https://www.dailycardinal.com/article/2020/02/decolonizing-curriculum-striving-towards-inclusive-education">https://www.dailycardinal.com/article/2020/02/decolonizing-curriculum-striving-towards-inclusive-education</a>
+               </p>
+               </p>
+            </div>
+         </div>
+      </div>
+      <input type="image" class="button4" name="" src="assets/icontest.png" onclick="loadPopUp('Popup4')" data-tilt data-tilt-scale="1.1">
+      <div class="modalContainerX" id="Popup5">
+         <div id="alertBox">
+            <div class="topbar">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('Popup5')">
+               <div id="topbar">BLM Fist 4/4</div>
+            </div>
+            <div class="contentContainer">
+               <H1>Black Lives Matter movement in Canada </H1>
+               <p>The first Canadian chapter of Black Lives Matter was established in Toronto in 2014.</p>
+               <p>In 2016, chapters were established in Vancouver , Edmonton and in Waterloo region.</p>
+               <p>In 2021, there are chapters all across Canada, including Sudbury, Ontario that are actively working to dismantle all forms of anti-Black racism, liberate Blackness, support Black healing, and affirm Black existence. </p>
+               <p>In addition to fighting against anti-Blackness, we create spaces to build our community. Through alternative forms of education, programming events for our communities, and supporting cultural creation, we believe that we create our own liberation through our commitment to thrive and build beautifully. In our movement for Black liberation, we join calls to decolonize Turtle Island and Nunavut Nunangatas there is no Black Liberation without Indigenous Liberation on Turtle Island.</p>
+               <p>In the video below, Sandy Hudson, founder of Black Lives Matter - Toronto explains  what led her to take action and found the first Canadian chapter. </p>
+               <p>“Why am I waiting for someone else to do this?”</p>
+               <iframe class="video" src="https://www.youtube.com/embed/tgbNymZ7vqY" style="border:0;"> </iframe>
+               <p class="Sources">Sources<br/><a href="https://blacklivesmatter.ca/">https://blacklivesmatter.ca/</a></p>
+            </div>
+         </div>
+      </div>
+      <input type="image" class="button5" name="" src="assets/icontest.png" onclick="loadPopUp('Popup5')" data-tilt data-tilt-scale="1.1">
+      <div class="modalContainerX" id="AfuaPopup">
+         <div id="alertBox">
+            <div class="topbar">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('AfuaPopup')">
+               <div id="topbar">BIRD OF PARADISE</div>
+            </div>
+            <div class="contentContainer">
+               <div id="AfuaContainer">
+                  <pre>
+		At dawn my mother stands on the hill
+		behind our house
+		and invokes the sun to rise
+		then she goes to the outdoor kitchen
+		and prepares tortillas and cocotea for our breakfast
+
+		My mother sells fruits and flowers in the market
+		stuff she grows with her own hands
+		she does not solicit customers
+		they come to her of their own volition
+		and at the end of each day
+		her items are all sold out
+
+		Now at age 42 my mother decides to stop having children
+		but not because her blood has ceased
+		"I have peopled the world with the numerous men
+		and women that my body has birthed," she says
+		"now it's time for me to birth other things"
+
+		At times my mother's back and feet grow tired
+		so I anoint them with coconut oil
+		her feet is a detailed map
+		her back is the starapple tree outside our front door
+
+		My mother has never travelled abroad
+		but she knows tales of everyland
+		she says the flowers in her gardens
+		especially the ginger lily, orchids,
+		and the bird of paradise, bring her such tidings
+
+		My mother is short in stature
+		all her children tower above her
+		some do not even want to recognise
+		or acknowledge her as they pass by in the marketplace
+		they are ashamed of this fruit and flower woman
+		this woman who fed them milk and tortillas
+		that made them so strong
+		sometimes they mock her
+		"she looks like something out of a Rivera mural," they jest
+		but my mother does not hear
+		her ears are beyond their words.
+		In the evening when she grows weary
+		my mother sings lullabies to the sun to entice it to sleep
+		so the dark can come and we all be rejuvenated
+		"It's in the darkness that we grow strong," she tells us
+
+		How wise she is
+		this woman with a life that no one can capture
+		how essential she is
+		this woman who makes gardens flower
+		and who feed us milk and tortillas
+		I watch her as she descends the hill to the marketplace
+
+		her skirt at her knee
+		her black hair flecked with grey
+
+			From <i>Understatement: An Anthology of 12 Toronto Poets</i>
+										</pre>
+                  <img src="assets/Afua.png" id="AfuaContainerImage">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="AfuaImage" data-tilt data-tilt-scale="1.1">
+         <input type="image" class="Afua" name="" src="assets/AfuaIcon.png" onclick="loadPopUp('AfuaPopup')">
+      </div>
+      <div class="modalContainerArtwork" id="OrecaPopup">
+         <div id="alertBox">
+            <div class="topbar">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('OrecaPopup')">
+               <div id="topbar"><i>Untitled</i>, Oreka James</div>
+            </div>
+            <div class="contentContainer">
+               <div id="Container">
+                  <img src="assets/OrekaJamesUntitled.jpg">
+                  <p>Oreka James, Untitled, 2016. Oil paint, oil stick and acrylic gouache on stretched canvas, 1.52 x 1.22 m.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="OrecaImage" data-tilt data-tilt-scale="1.1">
+         <input type="image" class="Oreca" name="" src="assets/OrecaIcon.png" onclick="loadPopUp('OrecaPopup')">
+      </div>
+      <div class="fixed">
+         <img src="assets/BLMSLogo.png" class="logo">
+         <ul id="menuButton">
+            <li onclick="returnHome()">Return Home</li>
+            <li onclick="loadPopUp('menu')">Menu</li>
+         </ul>
+         <ul id="menu">
+            <li id="desktopReturnHome" onclick="returnHome()" class="jiggle">Return Home</li>
+            <li onclick="loadPopUp('AboutPopUp')" class="jiggle">BLM Sudbury</li>
+            <li onclick="loadPopUp('NewsletterPopUp')" class="jiggle">Newsletter</li>
+            <li onclick="loadPopUp('DonatePopUp')" class="jiggle">Donate</li>
+         </ul>
+      </div>
+      <div class="modalList" id="WTPopUp">
+         <div class="listBox">
+            <div class="topBarList">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('WTPopUp')">
+            </div>
+            <div class="contentContainer">
+               <p> The Virtual Museum of Black History is an interactive and educational online space curated by Black Lives Matter - Sudbury in celebration of Black History Month 2021. </p>
+               <p>Throughout February, on a weekly basis, we will be unlocking a new wing of the museum. Each wing consists of educational content revolving around the experiences and stories of Black Canadians. </p>
+               <p>Take this month to recognize the contributions and achievements of those from African or Carribean descent. It is also an opportunity to learn more about the effects of racism,  discrimination, and how to support Black liberation. </p>
+               <p><i>The Virtual Museum of Black History is curated by Isak Vaillancourt and Ruthie Nkut. Web development by Willem Deisinger and Michael Boyce.</i>
+            </div>
+         </div>
+      </div>
+      <div class="modalList" id="AboutPopUp">
+         <div class="listBox">
+            <div class="topBarList">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('AboutPopUp')">
+            </div>
+            <div class="contentContainer">
+               <p>Black Lives Matter - Sudbury is an organization that is committed to fighting systemic racism in all of its forms, demanding that society and and all levels of government address and fix the root causes of racism in all social institutions.</p>
+               <p>We are a Black-led coalition of educators, students, activists, artists, and everything in between. </p>
+               <p>We work in solidarity with Indigenous communities.</p>
+            </div>
+         </div>
+      </div>
+      </div>
+      <div class="modalList" id="DonatePopUp">
+         <div class="listBox">
+            <div class="topBarList">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('DonatePopUp')">
+            </div>
+            <div class="contentContainer">
+               <p>Your support will help us organize and uplift local anti-racism actions, initiatives, and events. </p>
+               <p>Our primary method of accepting donations is via email money transfers (e-Transfers) sent to blacklivesmatter.sudbury@gmail.com. </p>
+               <p>Disclaimer: We are a not-for profit and therefore cannot issue official donation receipts for income tax purposes</p>
+            </div>
+         </div>
+      </div>
+      </div>
+      <div class="modalList" id="NewsletterPopUp">
+         <div class="listBox">
+            <div class="topBarList">
+               <img src="assets/xButton.png" class="x-icon" onclick="delWindow('NewsletterPopUp')">
+            </div>
+            <div class="contentContainer">
+               <p>Did you know we have a monthly bilingual newsletter? It’s filled with exclusive information about all of our events, community partnerships, BIPOC (Black, Indigenous and People of Color) arts and culture and more!</p>
+            </div>
+         </div>
+      </div>
+      </div>
+      <div class="block" id="background">
+         <div class="layer-block">
+            <div class="row row-1">
+               <img src="assets/background/background01_01.gif">
+               <img src="assets/background/background01_02.gif">
+               <img src="assets/background/background01_03.gif">
+               <img src="assets/background/background01_04.gif">
+               <img src="assets/background/background01_05.gif">
+               <img src="assets/background/background01_06.gif">
+               <img src="assets/background/background01_07.gif">
+               <img src="assets/background/background01_08.gif">
+               <img src="assets/background/background01_09.gif">
+               <img src="assets/background/background01_10.gif">
+            </div>
+            <div class="row row-2">
+               <img src="assets/background/background01_11.gif">
+               <img src="assets/background/background01_12.gif">
+               <img src="assets/background/background01_13.gif">
+               <img src="assets/background/background01_14.gif">
+               <img src="assets/background/background01_15.gif">
+               <img src="assets/background/background01_16.gif">
+               <img src="assets/background/background01_17.gif">
+               <img src="assets/background/background01_18.gif">
+               <img src="assets/background/background01_19.gif">
+               <img src="assets/background/background01_20.gif">
+            </div>
+            <div class="row row-3">
+               <img src="assets/background/background01_21.gif">
+               <img src="assets/background/background01_22.gif">
+               <img src="assets/background/background01_23.gif">
+               <img src="assets/background/background01_24.gif">
+               <img src="assets/background/background01_25.gif">
+               <img src="assets/background/background01_26.gif">
+               <img src="assets/background/background01_27.gif">
+               <img src="assets/background/background01_28.gif">
+               <img src="assets/background/background01_29.gif">
+               <img src="assets/background/background01_30.gif">
+            </div>
+            <div class="row row-4">
+               <img src="assets/background/background01_31.gif">
+               <img src="assets/background/background01_32.gif">
+               <img src="assets/background/background01_33.gif">
+               <img src="assets/background/background01_34.gif">
+               <img src="assets/background/background01_35.gif">
+               <img src="assets/background/background01_36.gif">
+               <img src="assets/background/background01_37.gif">
+               <img src="assets/background/background01_38.gif">
+               <img src="assets/background/background01_39.gif">
+               <img src="assets/background/background01_40.gif">
+            </div>
+            <div class="row row-5">
+               <img src="assets/background/background01_41.gif">
+               <img src="assets/background/background01_42.gif">
+               <img src="assets/background/background01_43.gif">
+               <img src="assets/background/background01_44.gif">
+               <img src="assets/background/background01_45.gif">
+               <img src="assets/background/background01_46.gif">
+               <img src="assets/background/background01_47.gif">
+               <img src="assets/background/background01_48.gif">
+               <img src="assets/background/background01_49.gif">
+               <img src="assets/background/background01_50.gif">
+            </div>
+            <div class="row row-6">
+               <img src="assets/background/background01_51.gif">
+               <img src="assets/background/background01_52.gif">
+               <img src="assets/background/background01_53.gif">
+               <img src="assets/background/background01_54.gif">
+               <img src="assets/background/background01_55.gif">
+               <img src="assets/background/background01_56.gif">
+               <img src="assets/background/background01_57.gif">
+               <img src="assets/background/background01_58.gif">
+               <img src="assets/background/background01_59.gif">
+               <img src="assets/background/background01_60.gif">
+            </div>
+            <div class="row row-7">
+               <img src="assets/background/background01_61.gif">
+               <img src="assets/background/background01_62.gif">
+               <img src="assets/background/background01_63.gif">
+               <img src="assets/background/background01_64.gif">
+               <img src="assets/background/background01_65.gif">
+               <img src="assets/background/background01_66.gif">
+               <img src="assets/background/background01_67.gif">
+               <img src="assets/background/background01_68.gif">
+               <img src="assets/background/background01_69.gif">
+               <img src="assets/background/background01_70.gif">
+            </div>
+            <div class="row row-8">
+               <img src="assets/background/background01_71.gif">
+               <img src="assets/background/background01_72.gif">
+               <img src="assets/background/background01_73.gif">
+               <img src="assets/background/background01_74.gif">
+               <img src="assets/background/background01_75.gif">
+               <img src="assets/background/background01_76.gif">
+               <img src="assets/background/background01_77.gif">
+               <img src="assets/background/background01_78.gif">
+               <img src="assets/background/background01_79.gif">
+               <img src="assets/background/background01_80.gif">
+            </div>
+            <div class="row row-9">
+               <img src="assets/background/background01_81.gif">
+               <img src="assets/background/background01_82.gif">
+               <img src="assets/background/background01_83.gif">
+               <img src="assets/background/background01_84.gif">
+               <img src="assets/background/background01_85.gif">
+               <img src="assets/background/background01_86.gif">
+               <img src="assets/background/background01_87.gif">
+               <img src="assets/background/background01_88.gif">
+               <img src="assets/background/background01_89.gif">
+               <img src="assets/background/background01_90.gif">
+            </div>
+         </div>
+      </div>
+      <!-- Tickets -->
+      <div id="ac-wrapper" style='display:none'>
+         <div id="popup">
+            <div class="mobileticket">
+               <img src="assets/ticketmobile.svg">
+            </div>
+            <center>
+               <div class="main-content">
+                  <div class="ticket">
+                     <div class="ticket__main">
+                        <div class="header">VIRTUAL MUSEUM OF BLACK HISTORY</div>
+                        <div class="info passenger">
+                           <div class="info__item">Presented by</div>
+                           <div class="info__detail">Black Lives Matter Sudbury</div>
+                        </div>
+                        <div class="info platform">
+                           <span></span><span>New</span><span>exhibitions</span>
+                           <div class="number">
+                              <div>released</div>
+                              <div> <span>weekly</span><span>February 2021</span></div>
+                           </div>
+                        </div>
+                        <div class="info departure">
+                           <div class="info__item">What is it?</div>
+                           <div class="info__detail">A virtual map to explore</div>
+                        </div>
+                        <div class="info arrival">
+                           <div class="info__item">How do I use it?</div>
+                           <div class="info__detail">Scroll and click</div>
+                        </div>
+                        <div class="info date">
+                           <div class="info__item">Date</div>
+                           <div class="info__detail">
+                              <script>
+                                 var today = new Date();
+                                 const d = new Date(2010, 7, 5);
+                                 const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+                                 const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
+                                 const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+                                 console.log(`${da}-${mo}-${ye}`);
+                                 document.write(today);
+                              </script>
+                           </div>
+                        </div>
+                        <div class="info time">
+                           <div class="info__item">Who?</div>
+                           <div class="info__detail">
+                              <p>general admission</p>
+                           </div>
+                        </div>
+                        <div class="info carriage">
+                           <div class="info__item">When?</div>
+                           <div class="info__detail">24/7</div>
+                        </div>
+                        <div class="info seat">
+                           <div class="info__item">Ticket</div>
+                           <div class="info__detail">#407</div>
+                        </div>
+                        <div class="fineprint">
+                           <p>Toggle sound on/off by clicking the button in the top right-hand corner of your screen.</p>
+                           <p>This ticket is Non-refundable • Thank you for joining us</p>
+                        </div>
+                        <div class="snack">
+                           <svg viewBox="0 -11 414.00053 414">
+                              <path d="m202.480469 352.128906c0-21.796875-17.671875-39.46875-39.46875-39.46875-21.800781 0-39.472657 17.667969-39.472657 39.46875 0 21.800782 17.671876 39.472656 39.472657 39.472656 21.785156-.023437 39.445312-17.683593 39.46875-39.472656zm0 0"></path>
+                              <path d="m348.445312 348.242188c2.148438 21.691406-13.695312 41.019531-35.390624 43.167968-21.691407 2.148438-41.015626-13.699218-43.164063-35.390625-2.148437-21.691406 13.695313-41.019531 35.386719-43.167969 21.691406-2.148437 41.019531 13.699219 43.167968 35.390626zm0 0"></path>
+                              <path d="m412.699219 63.554688c-1.3125-1.84375-3.433594-2.941407-5.699219-2.941407h-311.386719l-3.914062-24.742187c-3.191407-20.703125-21.050781-35.9531252-42-35.871094h-42.699219c-3.867188 0-7 3.132812-7 7s3.132812 7 7 7h42.699219c14.050781-.054688 26.03125 10.175781 28.171875 24.0625l33.800781 213.515625c3.191406 20.703125 21.050781 35.957031 42 35.871094h208.929687c3.863282 0 7-3.132813 7-7 0-3.863281-3.136718-7-7-7h-208.929687c-14.050781.054687-26.03125-10.175781-28.171875-24.0625l-5.746094-36.300781h213.980469c18.117187-.007813 34.242187-11.484376 40.179687-28.597657l39.699219-114.578125c.742188-2.140625.402344-4.511718-.914062-6.355468zm0 0"></path>
+                           </svg>
+                        </div>
+                        <div class="barcode">
+                           <div class="barcode__scan"></div>
+                           <div class="barcode__id">001256733</div>
+                        </div>
+                     </div>
+                     <div class="ticket__side">
+                        <div class="logo">
+                           <p>VMBlackHistory.ca</p>
+                        </div>
+                        <div class="info side-arrive">
+                           <div class="info__item">Arrival</div>
+                           <div class="info__detail">Today</div>
+                        </div>
+                        <div class="info side-depart">
+                           <div class="info__item">Venue</div>
+                           <div class="info__detail">worldwideweb</div>
+                        </div>
+                        <div class="info side-date">
+                           <div class="info__item">BLM</div>
+                           <div class="info__detail">Sudbury</div>
+                        </div>
+                        <div class="info side-time">
+                           <div class="info__item">Time</div>
+                           <div class="info__detail">Now</div>
+                        </div>
+                        <div class="barcode">
+                           <div class="barcode__scan"></div>
+                           <div class="barcode__id">001256733</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <input type="submit" name="submit" value="Enter" onClick="PopUp('hide')" onclick="aud_play_pause()"/>
+            </center>
+         </div>
+      </div>
+      <!-- Museumsounds script -->
+      <script>
+         function aud_play_pause() {
+           var myAudio = document.getElementById("audio");
+           if (audio.paused) {
+             audio.play();
+           } else {
+             audio.pause();
+           }
+         }
+      </script>
+      <!-- Tickets script -->
+      <script>
+         function PopUp(hideOrshow) {
+             if (hideOrshow == 'hide') document.getElementById('ac-wrapper').style.display = "none";
+             else document.getElementById('ac-wrapper').removeAttribute('style');
+         }
+         window.onload = function () {
+             setTimeout(function () {
+                 PopUp('show');
+             }, 1);
+         }
+      </script>
+      <!-- tilt.js script-->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+      <!-- Remove nicescroll on phones script-->
+      <script>
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+          $('#NiceScrolling').remove();
+      }
+      </script>
+   </body>
+</html>
